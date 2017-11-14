@@ -1,0 +1,42 @@
+<div class="container fill contact-list" style="background-color: #FFF" ng-controller="listController">
+    <div class="row status-bar"></div>
+    <div class="row header">
+        <h1 class="col text-center">Contacts</h1>
+    </div>
+    <div class="contact-group">
+        <div class="row title">Favorite Contacts</div>
+        <ul class="list-unstyled">
+            <li class="media contact" ng-click="displayContactDetails(contact.id)" ng-repeat="contact in contacts | filter: { isFavorite: 'true' } track by contact.id">
+                <div class="media-left">
+                    <img class="picture" ng-src="{{contact.smallImageURL}}" onerror="this.src='./assets/img/user-small.png'" alt="PIC">                    
+                </div>
+                <div class="media-left favorite">
+                    <img class="favorite" ng-show="contact.isFavorite" src="./assets/img/favorite-true.png" alt="*">
+                    <div class="favorite-placeholder" ng-hide="contact.isFavorite"></div>
+                </div>
+                <div class="media-body">
+                    <h1 class="mt-0">{{contact.name}}</h1>
+                    <span>{{contact.companyName}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="contact-group">
+        <div class="row title">Other Contacts</div>
+        <ul class="list-unstyled">
+            <li class="media contact" ng-click="displayContactDetails(contact.id)" ng-repeat="contact in contacts | filter: { isFavorite: 'false' } track by contact.id">
+                <div class="media-left">
+                    <img class="picture" ng-src="{{contact.smallImageURL}}" onerror="this.src='./assets/img/user-small.png'" alt="PIC">
+                </div>
+                <div class="media-left">
+                    <img class="favorite" ng-show="contact.isFavorite" src="./assets/img/favorite-true.png" alt="*">
+                    <div class="favorite-placeholder" ng-hide="contact.isFavorite"></div>
+                </div>
+                <div class="media-body">
+                    <h1 class="mt-0">{{contact.name}}</h1>
+                    <span>{{contact.companyName}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

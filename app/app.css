@@ -1,0 +1,115 @@
+body {
+    font-size: 16px;
+    background-color: #f1f1f1;
+    color: #63666a;
+}
+
+hr, ul, .media {
+    margin: 0;
+}
+
+img {
+    vertical-align: inherit;
+}
+
+li {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    li:hover {
+        background-color: #f9f9f9;
+    }
+
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+
+.status-bar {
+    height: 10px;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ececec;
+}
+
+    .header h1 {
+        font-size: 120%;
+    }
+
+.contact-group .title {
+    padding: 3px 15px;
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f4f4f4;
+}
+
+.contact {
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+    .contact h1 {
+        font-size: 120%;
+        margin: 0;
+    }
+
+    .contact span {
+        font-size: 90%;
+        color: #999;
+    }
+
+    .contact .picture {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact .favorite { }
+
+    .contact .favorite-placeholder {
+        padding-left: 20px;
+    }
+
+.profile-info {
+    padding: 15px;
+}
+
+    .profile-info h1 {
+        font-size: 175%;
+    }
+
+    .profile-info h2 {
+        font-size: 120%;
+        font-weight: lighter;
+        color: #999;
+    }
+
+
+.profile-picture {
+    padding: 15px;
+}
+
+.contact-record {
+    margin: 15px 0;
+}
+
+    .contact-record label {
+        font-size: 80%;
+        font-weight: bold;
+        margin: 0;
+        display: block;
+        text-transform: uppercase;
+        color: #999;
+    }
+
+.contact-record {
+    font-size: 90%;
+    color: #999;
+}
