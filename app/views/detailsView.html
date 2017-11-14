@@ -1,4 +1,4 @@
-<div class="container fill contact-profile" style="background-color: #FFF">
+<div class="container fill contact-profile" style="background-color: #FFF" ng-model="contact">
     <div class="row status-bar"></div>
     <div class="row header">
         <div class="float-left">Contacts</div>
@@ -9,9 +9,9 @@
     </div>
     <div class="row">
         <div class="profile-info col-12 col-md-4 text-center">
-            <img class="profile-picture" src="./assets/img/user-large.png" alt="PIC">
-            <h1>John Doe</h1>
-            <h2>Something else here</h2>
+            <img class="profile-picture" ng-src="{{contact.largeImageURL}}" onerror="this.src='./assets/img/user-large.png'" alt="PIC">            
+            <h1>{{contact.name}}</h1>
+            <h2>{{contact.companyName}}</h2>
         </div>
         <div class="col-12 col-md-8">
             <ul class="list-unstyled">

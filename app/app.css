@@ -93,6 +93,8 @@ li {
 
 
 .profile-picture {
+    width: 180px;
+    height: 180px;
     padding: 15px;
 }
 
