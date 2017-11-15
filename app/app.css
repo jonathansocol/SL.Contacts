@@ -8,21 +8,22 @@ hr, ul, .media {
     margin: 0;
 }
 
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
 img {
     vertical-align: inherit;
 }
 
-li {
-    border-bottom: 1px solid #f1f1f1;
+.float-left {
+    float: left;
 }
 
-    li:last-child {
-        border-bottom: none;
-    }
-
-    li:hover {
-        background-color: #f9f9f9;
-    }
+.float-right {
+    float: right;
+}
 
 .fill {
     min-height: 100%;
@@ -35,13 +36,36 @@ li {
 }
 
 .header {
+    height: 42px;
     background-color: #f9f9f9;
     border-bottom: 1px solid #ececec;
 }
 
     .header h1 {
         font-size: 120%;
+        margin: 0;
+        margin-top: 10px;
     }
+
+.contact-list li {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+    .contact-list li:last-child {
+        border-bottom: none;
+    }
+
+.contact-group li:hover {
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 47%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(249,249,249,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 47%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 47%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 47%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 47%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+    cursor: pointer;
+}
 
 .contact-group .title {
     padding: 3px 15px;
@@ -53,7 +77,6 @@ li {
 
 .contact {
     padding: 15px 0;
-    cursor: pointer;
 }
 
     .contact h1 {
@@ -71,11 +94,41 @@ li {
         height: 60px;
     }
 
-    .contact .favorite { }
+    .contact .favorite {
+    }
 
     .contact .favorite-placeholder {
         padding-left: 20px;
     }
+
+
+.navigation-back {
+    display: table-row;
+    margin-left: 10px;
+}
+
+    .navigation-back span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .navigation-back .back-arrow {
+        font-size: 180%;
+        padding-right: 5px;
+    }
+
+.favorite-button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+    .favorite-button img {
+        cursor: pointer;
+    }
+
+.profile li {
+    border-top: 1px solid #f1f1f1;
+}
 
 .profile-info {
     padding: 15px;
@@ -93,10 +146,14 @@ li {
 
 
 .profile-picture {
+    width: 180px;
+    height: 180px;
     padding: 15px;
 }
 
 .contact-record {
+    font-size: 90%;
+    color: #999;
     margin: 15px 0;
 }
 
@@ -109,7 +166,17 @@ li {
         color: #999;
     }
 
-.contact-record {
-    font-size: 90%;
-    color: #999;
+.contact-information {
+    height: 20px;
+    font-weight: bold;
+    color: #666;
+}
+
+    .contact-information .phone-type {
+        font-weight: lighter;
+        color: #999;
+    }
+
+.phone-type {
+    text-transform: capitalize;
 }

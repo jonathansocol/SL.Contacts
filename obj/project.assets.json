@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonathan.Socol\\Documents\\Visual Studio 2017\\Projects\\SL.CodeChallenge\\SL.CodeChallenge.csproj",
+      "projectUniqueName": "C:\\Users\\Jonathan.Socol\\Source\\Repos\\SL.CodeChallenge\\SL.CodeChallenge.csproj",
       "projectName": "SL.CodeChallenge",
-      "projectPath": "C:\\Users\\Jonathan.Socol\\Documents\\Visual Studio 2017\\Projects\\SL.CodeChallenge\\SL.CodeChallenge.csproj",
+      "projectPath": "C:\\Users\\Jonathan.Socol\\Source\\Repos\\SL.CodeChallenge\\SL.CodeChallenge.csproj",
       "packagesPath": "C:\\Users\\Jonathan.Socol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonathan.Socol\\Documents\\Visual Studio 2017\\Projects\\SL.CodeChallenge\\obj\\",
+      "outputPath": "C:\\Users\\Jonathan.Socol\\Source\\Repos\\SL.CodeChallenge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
