@@ -34,6 +34,7 @@ img {
     height: 10px;
     background-color: #f9f9f9;
 }
+
 .header {
     height: 42px;
     background-color: #f9f9f9;
@@ -119,8 +120,11 @@ img {
 .favorite-button {
     margin-right: 10px;
     margin-top: 10px;
-    cursor: pointer;
 }
+
+    .favorite-button img {
+        cursor: pointer;
+    }
 
 .profile li {
     border-top: 1px solid #f1f1f1;
@@ -164,7 +168,14 @@ img {
 
 .contact-information {
     height: 20px;
+    font-weight: bold;
+    color: #666;
 }
+
+    .contact-information .phone-type {
+        font-weight: lighter;
+        color: #999;
+    }
 
 .phone-type {
     text-transform: capitalize;

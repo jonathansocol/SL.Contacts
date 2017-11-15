@@ -18,7 +18,7 @@
         </div>
         <div class="col-12 col-md-8">
             <ul class="list-unstyled">
-                <li ng-repeat="(key, data) in contact.phone">
+                <li ng-show="contact.phone" ng-repeat="(key, data) in contact.phone">
                     <div class="contact-record">
                         <label>Phone:</label>
                         <div class="contact-information">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </li>                
-                <li>
+                <li ng-show="contact.address" >
                     <div class="contact-record">
                         <label>Address:</label>
                         <div class="contact-information">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li ng-show="contact.birthdate" >
                     <div class="contact-record">
                         <label>Birthdate:</label>
                         <div class="contact-information">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li ng-show="contact.emailAddress" >
                     <div class="contact-record">
                         <label>Email</label>
                         <div class="contact-information">

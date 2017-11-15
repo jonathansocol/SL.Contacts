@@ -3,7 +3,7 @@
         return function (input) {
 
             if (input == undefined || input == null || input == '') {
-                return '';
+                return '-';
             }
 
             var phoneSections = input.split('-');
