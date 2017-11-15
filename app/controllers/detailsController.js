@@ -5,7 +5,11 @@ angular.module('contactsApp')
 
         $scope.contact = apiService.getContactById(contactId);
 
-        //function getContactById (id) {
-        //    $scope.contact = $filter('filter')($rootScope.contacts, { id: id })[0];
-        //};   
+        $scope.navigateBack = function () {
+            $location.path('/contactList');
+        }
+
+        $scope.changeFavorite = function (value) {
+            apiService.updateContact(contactId, value);
+        }
     }]);

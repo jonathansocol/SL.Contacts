@@ -8,21 +8,22 @@ hr, ul, .media {
     margin: 0;
 }
 
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
 img {
     vertical-align: inherit;
 }
 
-li {
-    border-bottom: 1px solid #f1f1f1;
+.float-left {
+    float: left;
 }
 
-    li:last-child {
-        border-bottom: none;
-    }
-
-    li:hover {
-        background-color: #f9f9f9;
-    }
+.float-right {
+    float: right;
+}
 
 .fill {
     min-height: 100%;
@@ -43,6 +44,19 @@ li {
         font-size: 120%;
     }
 
+.contact-list li {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+    .contact-list li:last-child {
+        border-bottom: none;
+    }
+
+.contact-group li:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
 .contact-group .title {
     padding: 3px 15px;
     font-size: 80%;
@@ -53,7 +67,6 @@ li {
 
 .contact {
     padding: 15px 0;
-    cursor: pointer;
 }
 
     .contact h1 {
@@ -71,11 +84,38 @@ li {
         height: 60px;
     }
 
-    .contact .favorite { }
+    .contact .favorite {
+    }
 
     .contact .favorite-placeholder {
         padding-left: 20px;
     }
+
+
+.navigation-back {
+    display: table-row;
+    margin-left: 10px;
+}
+
+    .navigation-back span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .navigation-back .back-arrow {
+        font-size: 180%;
+        padding-right: 5px;
+    }
+
+.favorite-button {
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.profile li {
+    border-top: 1px solid #f1f1f1;
+}
 
 .profile-info {
     padding: 15px;
@@ -99,6 +139,8 @@ li {
 }
 
 .contact-record {
+    font-size: 90%;
+    color: #999;
     margin: 15px 0;
 }
 
@@ -111,7 +153,10 @@ li {
         color: #999;
     }
 
-.contact-record {
-    font-size: 90%;
-    color: #999;
+.contact-information {
+    height: 20px;
+}
+
+.phone-type {
+    text-transform: capitalize;
 }

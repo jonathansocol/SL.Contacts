@@ -6,7 +6,7 @@
     <div class="contact-group">
         <div class="row title">Favorite Contacts</div>
         <ul class="list-unstyled">
-            <li class="media contact" ng-click="displayContactDetails(contact.id)" ng-repeat="contact in contacts | filter: { isFavorite: 'true' } track by contact.id">
+            <li class="media contact" ng-click="displayContactDetails(contact.id)" ng-repeat="contact in contacts | filter: { isFavorite: 'true' } | orderBy: 'name' track by contact.id">
                 <div class="media-left">
                     <img class="picture" ng-src="{{contact.smallImageURL}}" onerror="this.src='./assets/img/user-small.png'" alt="PIC">                    
                 </div>
@@ -24,7 +24,7 @@
     <div class="contact-group">
         <div class="row title">Other Contacts</div>
         <ul class="list-unstyled">
-            <li class="media contact" ng-click="displayContactDetails(contact.id)" ng-repeat="contact in contacts | filter: { isFavorite: 'false' } track by contact.id">
+            <li class="media contact" ng-click="displayContactDetails(contact.id)" ng-repeat="contact in contacts | filter: { isFavorite: 'false' } | orderBy: 'name' track by contact.id">
                 <div class="media-left">
                     <img class="picture" ng-src="{{contact.smallImageURL}}" onerror="this.src='./assets/img/user-small.png'" alt="PIC">
                 </div>

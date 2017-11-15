@@ -1,10 +1,13 @@
-<div class="container fill contact-profile" style="background-color: #FFF" ng-model="contact">
+<div class="container fill profile" style="background-color: #FFF" ng-model="contact">
     <div class="row status-bar"></div>
     <div class="row header">
-        <div class="float-left">Contacts</div>
-        <div class="float-right">
-            <img ng-show="contact.isFavorite" src="./assets/img/favorite-true.png" alt="*" />
-            <img ng-hide="contact.isFavorite" src="./assets/img/favorite-false.png" alt="°" />
+        <a ng-click="navigateBack()" class="float-left navigation-back">
+            <span class="back-arrow">< </span>
+            <span>Contacts</span>
+        </a>
+        <div class="float-right favorite-button">
+            <img ng-click="changeFavorite(false)" ng-show="contact.isFavorite" src="./assets/img/favorite-true.png" alt="*" />
+            <img ng-click="changeFavorite(true)" ng-hide="contact.isFavorite" src="./assets/img/favorite-false.png" alt="°" />
         </div>
     </div>
     <div class="row">
@@ -15,22 +18,36 @@
         </div>
         <div class="col-12 col-md-8">
             <ul class="list-unstyled">
-                <li>
+                <li ng-repeat="(key, data) in contact.phone">
                     <div class="contact-record">
                         <label>Phone:</label>
-                        <div>
-                            <span class="float-left">(907) 345-1215</span>
-                            <span class="float-right">Home</span>
+                        <div class="contact-information">
+                            <span class="float-left">{{ data | telephone }}</span>
+                            <span class="float-right phone-type">{{ key }}</span>
+                        </div>
+                    </div>
+                </li>                
+                <li>
+                    <div class="contact-record">
+                        <label>Address:</label>
+                        <div class="contact-information">
+                            <span class="float-left"> {{ contact.address | address }} </span>
                         </div>
                     </div>
                 </li>
-                <hr />
                 <li>
                     <div class="contact-record">
-                        <label>Phone:</label>
-                        <div>
-                            <span class="float-left">(907) 345-1215</span>
-                            <span class="float-right">Home</span>
+                        <label>Birthdate:</label>
+                        <div class="contact-information">
+                            <span class="float-left">{{ contact.birthdate | date : "longDate" }}</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="contact-record">
+                        <label>Email</label>
+                        <div class="contact-information">
+                            <span class="float-left">{{ contact.emailAddress }}</span>
                         </div>
                     </div>
                 </li>

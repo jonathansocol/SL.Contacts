@@ -1,5 +1,5 @@
 ﻿angular.module('contactsApp')
-    .service('apiService', ['$http', function ($http) {
+    .service('apiService', ['$http', '$filter', function ($http, $filter) {
 
         var contacts;
 
@@ -24,8 +24,12 @@
             setContacts: function (list) {
                 contacts = list;
             },
-            updateContact: function (id) {
-                
+            updateContact: function (id, value) {
+                for (var i = 0; i < contacts.length; i++) {
+                    if (contacts[i].id == id) {
+                        contacts[i].isFavorite = value;
+                    }
+                }
             }
         };
     }]);
