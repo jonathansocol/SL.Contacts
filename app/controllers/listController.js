@@ -5,6 +5,5 @@ angular.module('contactsApp')
 
         $scope.displayContactDetails = function (key) {
             $location.path('/contactDetails').search({ id: key });
-        };
-        
+        };        
     }]);

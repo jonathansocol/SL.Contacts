@@ -21,4 +21,11 @@ angular.module('contactsApp', ['ngRoute'])
             controller: 'detailsController'
         });
         $routeProvider.otherwise({ redirectTo: '/contactList' });
-    }]);
+    }]).run(function ($rootScope, $location, apiService) {
+        $rootScope.$on("$routeChangeStart", function (event, next, current) {
+            if (!apiService.isInitialized()) {
+                $location.search('id', null);
+                $location.path("/contactList");
+            }            
+        });
+    });
